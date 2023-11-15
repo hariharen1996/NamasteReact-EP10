@@ -1,0 +1,39 @@
+Assignment 10 - Tailwind Css
+
+1. Explore all the way of writing css
+ => using normal css files. (eg): index.css 
+ => using sass/scss
+ => styled components
+ => libraries like tailwindcss, bootstrap, material ui
+
+2. How do we configure tailwind?
+=> Install tailwind css 
+npm install -D tailwindcss
+npx tailwindcss init
+=> configure talwind css using template paths
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+=> Add tailwind directive to css 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+3. What is content, extend, theme and plugin in tailwindcss?
+The content tells about the file formats, where we can apply styles.
+The Theme tells about the fonts.
+The extend tells about adding extra styles, which is not presented in tailwindcss
+The plugins are just functions that register new styles for Tailwind to inject into the user's stylesheet.
+
+4. Why do we have .postcssrc file?
+The parcel bundler should understand tailwindcss and you have to tell that we are using tailwindcss.
+
+coding
+
+configure tailwind and tru to build your whole app using tailwind
